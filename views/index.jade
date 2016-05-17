@@ -1,5 +1,23 @@
 doctype html
 
+mixin carousel(id, items)
+    .carousel.slide(id='carousel-#{id}' , data-ride='carousel')
+        //- Indicators
+        ol.carousel-indicators
+            each item,index in items
+                if(index === 0)
+                    li.active(data-target="#carousel-#{id}", data-slide-to="#{index}")
+                else
+                    li(data-target="#carousel-#{id}", data-slide-to="#{index}")
+        .carousel-inner(role="listbox")
+            each item,index in items
+                if(index === 0)
+                    .item.active
+                        img(src="#{item.image}")
+                else
+                    .item
+                        img(src="#{item.image}")
+
 html(lang="en")
     head
         meta(charset='utf-8')
@@ -24,8 +42,18 @@ html(lang="en")
                         li: a(href='#') Test1
                         li: a(href='#') Test2
                         li: a(href='#') Test3
+        //- img(src='images/logo.png' id='logo' alt='logo for lettucespoon')
+        .row
+            .view
+                +carousel("photoroll",[
+                    {image: "images/burgers.jpg"},
+                    {image: "images/ice_cream.jpg"},
+                    {image: "images/nova.jpg"},
+                    {image: "images/paella.jpg"},
+                    {image: "images/pizza.jpg"}
+                ])
 
-        img(src='images/logo.png' id='logo' alt='logo for lettucespoon')
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
         script(src='scripts/jquery.anchorScroll-master/jquery.anchorScroll.min.js')
+        script(src='scripts/animation.js')

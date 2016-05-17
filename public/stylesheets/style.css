@@ -11,3 +11,10 @@ ul {
     padding-top: 50px;
     width: 100%;
 }
+
+.view {
+    padding-top: 50px;
+    display: block;
+    overflow: auto;
+    height: 100vh;
+}
