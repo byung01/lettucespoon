@@ -1,7 +1,7 @@
 doctype html
 
 mixin carousel(id, items)
-    .carousel.slide(id='carousel-#{id}' , data-ride='carousel')
+    .carousel.slide(id='carousel-#{id}', data-ride='carousel')
         //- Indicators
         ol.carousel-indicators
             each item,index in items
@@ -9,19 +9,20 @@ mixin carousel(id, items)
                     li.active(data-target="#carousel-#{id}", data-slide-to="#{index}")
                 else
                     li(data-target="#carousel-#{id}", data-slide-to="#{index}")
+        //- Wrapper for slides
         .carousel-inner(role="listbox")
             each item,index in items
                 if(index === 0)
                     .item.active
-                        img(src="#{item.image}")
+                        img(src="#{item.image}", alt="Food image")
                 else
                     .item
-                        img(src="#{item.image}")
+                        img(src="#{item.image}", alt="Food image")
 
 html(lang="en")
     head
         meta(charset='utf-8')
-        link(href="stylesheets/style.css" rel="stylesheet")
+        link(href="stylesheets/style.css", rel="stylesheet", type="text/css")
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
         title Lettucespoon
     body
@@ -48,7 +49,7 @@ html(lang="en")
                 +carousel("photoroll",[
                     {image: "images/burgers.jpg"},
                     {image: "images/ice_cream.jpg"},
-                    {image: "images/nova.jpg"},
+                    {image: "images/cookies.jpg"},
                     {image: "images/paella.jpg"},
                     {image: "images/pizza.jpg"}
                 ])
