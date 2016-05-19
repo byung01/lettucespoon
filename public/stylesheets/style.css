@@ -2,37 +2,43 @@ ul {
     margin: 0 !important;
 }
 
-#logo {
-    padding-top: 50px;
-    width: 100%;
-}
-
+/******************************************************************************/
+/*                             Reusable Styling                               */
+/******************************************************************************/
 .view {
     display: block;
     overflow: auto;
 }
 
+.photos {
+    padding-top: 50px !important;
+}
+
 /******************************************************************************/
-/**/
+/*                      Styling for the about section                         */
 /******************************************************************************/
 
 .about-view {
-/*    padding-left: 4%;
-    padding-right: 4%;*/
     background-color: black;
+    height: 100vh;
 }
 
-.about-view > h1 {
+.about-content {
+    padding: 10%;
+}
+
+.about-content > h1 {
     text-align: center;
     color: white !important;
+    padding-bottom: 5%;
 }
 
-.about-view > .col-md-8 > p {
+.about-content > .col-md-8 > p {
     color: white !important;
+    font-size: 16px;
 }
 
-.about-view > .col-md-8 > img {
+.about-content > .col-md-4 > img {
     display: inline-block !important;
-    width: 25% !important;
-    height: auto !important;
+    width: 100%;
 }
