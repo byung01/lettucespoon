@@ -18,6 +18,10 @@ mixin carousel(id, items)
                 else
                     .item
                         img(src="#{item.image}", alt="Food image")
+            a.left.carousel-control(href='#carousel-photoroll', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left
+            a.right.carousel-control(href='#carousel-photoroll', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right
 
 html(lang="en")
     head

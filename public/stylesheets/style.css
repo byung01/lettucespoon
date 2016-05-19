@@ -10,8 +10,16 @@ ul {
     overflow: auto;
 }
 
+/******************************************************************************/
+/*                         Styling for image carousel                         */
+/******************************************************************************/
+
 .photos {
     padding-top: 50px !important;
+}
+
+.carousel-control {
+    width: 10% !important;
 }
 
 /******************************************************************************/
@@ -24,13 +32,17 @@ ul {
 }
 
 .about-content {
-    padding: 10%;
+    padding: 5%;
 }
 
 .about-content > h1 {
     text-align: center;
     color: white !important;
-    padding-bottom: 5%;
+    padding-bottom: 4%;
+}
+
+.about-content > .col-md-8 {
+    padding-top: 5%;
 }
 
 .about-content > .col-md-8 > p {
