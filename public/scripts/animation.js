@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $('#carousel-photoroll').carousel({
-        interval: 2500,
+        interval: 3000,
+        pause: false
     });
 });

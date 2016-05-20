@@ -14,8 +14,13 @@ ul {
 /*                         Styling for image carousel                         */
 /******************************************************************************/
 
+.carousel {
+    width: 100%;
+}
+
 .photos {
     padding-top: 50px !important;
+    width: 100%;
 }
 
 .carousel-control {
@@ -28,7 +33,7 @@ ul {
 
 .about-view {
     background-color: black;
-    height: 100vh;
+    width: 100%;
 }
 
 .about-content {
@@ -41,16 +46,27 @@ ul {
     padding-bottom: 4%;
 }
 
-.about-content > .col-md-8 {
-    padding-top: 5%;
+.about-content > .row > .col-xs-12.col-sm-6.col-md-4 > .crop > img {
+    display: block !important;
+    width: 80%;
+    margin: auto;
 }
 
-.about-content > .col-md-8 > p {
+.about-content > .row > .col-xs-12.col-sm-6.col-md-4 {
+    padding-bottom: 3%;
+}
+
+/* Resizes the profile image for mobiles */
+@media only screen and (max-width: 770px) {
+    .crop {
+        width: 200px;
+        height: 150px;
+        overflow: hidden;
+        margin: auto;
+    }
+}
+
+.about-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
     color: white !important;
-    font-size: 16px;
-}
-
-.about-content > .col-md-4 > img {
-    display: inline-block !important;
-    width: 100%;
+    font-size: 15px;
 }

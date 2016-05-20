@@ -25,7 +25,8 @@ mixin carousel(id, items)
 
 html(lang="en")
     head
-        meta(charset='utf-8')
+        meta(charset="utf-8")
+        meta(name="viewport", content=["width=device-width","initial-scale=1","minimum-scale=1","maximum-scale=1"])
         link(href="stylesheets/style.css", rel="stylesheet", type="text/css")
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
         title Lettucespoon
@@ -57,13 +58,14 @@ html(lang="en")
                     {image: "images/salmon.jpg"},
                     {image: "images/sushi.jpg"}
                 ])
-        .row
-            .view.about-view(id="about")
-                .about-content
-                    h1 About the writer
-                    .col-md-4
-                        img(src="images/linda_selfie.jpg" alt="Profile for Linda")
-                    .col-md-8
+        .view.about-view(id="about")
+            .about-content
+                h1 About the writer
+                .row
+                    .col-xs-12.col-sm-6.col-md-4
+                        .crop
+                            img(src="images/linda_selfie.jpg" alt="Profile for Linda")
+                    .col-xs-12.col-sm-6.col-md-8
                         p I live to eat, and I eat to live. Lettuce Spoon is where I combine my interests in delicious foods and balanced nutrition. I am Linda Yung, a Registered Dietitian and masters of Food Policy and Applied Nutrition from Tufts Friedman. I am a die-hard New Yorker with lofty goals of changing the ways Americans perceive food. I can also be described as an aspiring jet-setter, amateur tai chi master, and novice stargazer. On the real, I enjoy meandering through foreign markets, I spend too much time reading science fiction, and I experiment a lot in the kitchen. I hope Lettuce Spoon will provide you with some insight on my gastronomic lifestyle and perhaps a pinch of inspiration as well.
                         p Do you have any questions on the recipes? Don't know what you should be eating for breakfast? Need a recommendation for where to eat on a first date? Don't hesitate to contact me! 
                         p To learn more about my hometown, visit my New York City cheat sheet,
