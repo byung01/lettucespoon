@@ -48,7 +48,11 @@ h1 {
 }
 
 .about-content {
-    padding: 4%;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
+    /*padding: 2%, 4%, 4%, 4%;*/
 }
 
 .about-content > h1 {
@@ -71,8 +75,8 @@ h1 {
     .crop {
         width: 200px;
         height: 150px;
-        overflow: hidden;
         margin: auto;
+        overflow: hidden;
     }
 }
 
@@ -91,12 +95,19 @@ h1 {
 }
 
 .inspiration-content {
-    padding: 4%;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
 }
 
 .inspiration-content > h1 {
     color: #ff66ff !important;
     padding-bottom: 4%; 
+}
+
+.inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
+    padding-left: 4%;
 }
 
 
