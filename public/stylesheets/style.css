@@ -1,10 +1,10 @@
-#logo {
-    padding-top: 55px !important;
-    width: 100%;
+.page-break {
 }
 
-h1 {
-    /*text-align: center;*/
+.page-break > img {
+    display: block;
+    width: 80%;
+    margin: auto;
 }
 
 .navbar-brand {
@@ -24,6 +24,10 @@ h1 {
 /******************************************************************************/
 /*                         Styling for image carousel                         */
 /******************************************************************************/
+
+.carousel {
+    margin-bottom: 5%;
+}
 
 .carousel-control {
     width: 8% !important;
@@ -56,12 +60,12 @@ h1 {
 
 .about-content > h1 {
     color: #32d25a !important;
-    padding-bottom: 4%;
+    padding-bottom: 3%;
 }
 
 .about-content > .row > .col-xs-12.col-sm-6.col-md-4 > .crop > img {
     display: block !important;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -77,11 +81,15 @@ h1 {
         margin: auto;
         overflow: hidden;
     }
+
+    h1 {
+        text-align: center;
+    }
 }
 
 .about-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
     color: black !important;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 /******************************************************************************/
@@ -102,11 +110,16 @@ h1 {
 
 .inspiration-content > h1 {
     color: #ff66ff !important;
-    padding-bottom: 4%; 
+    padding-top: 2%;
+    padding-bottom: 2%; 
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote {
     font-size: 16px;
+}
+
+.inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote > br {
+    line-height: 2.3;
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
