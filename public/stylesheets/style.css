@@ -4,7 +4,7 @@
 }
 
 h1 {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .navbar-brand {
@@ -51,8 +51,7 @@ h1 {
     padding-top: 1%;
     padding-left: 4%;
     padding-right: 4%;
-    padding-bottom: 4%;
-    /*padding: 2%, 4%, 4%, 4%;*/
+    padding-bottom: 3%;
 }
 
 .about-content > h1 {
@@ -104,6 +103,10 @@ h1 {
 .inspiration-content > h1 {
     color: #ff66ff !important;
     padding-bottom: 4%; 
+}
+
+.inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote {
+    font-size: 16px;
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
