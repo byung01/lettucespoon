@@ -1,10 +1,21 @@
-ul {
-    margin: 0 !important;
+#logo {
+    padding-top: 55px !important;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.navbar-brand {
+    color: #32d25a !important;
+    font-size: 20px !important;
 }
 
 /******************************************************************************/
 /*                             Reusable Styling                               */
 /******************************************************************************/
+
 .view {
     display: block;
     overflow: auto;
@@ -14,18 +25,18 @@ ul {
 /*                         Styling for image carousel                         */
 /******************************************************************************/
 
-.carousel {
-    width: 100%;
+.carousel-control {
+    width: 8% !important;
 }
 
 .photos {
-    padding-top: 50px !important;
-    width: 100%;
+    padding-top: 50px;
 }
 
-.carousel-control {
-    width: 10% !important;
-}
+/*.carousel-inner > .item > img {
+    width: 80%;
+    margin: auto;
+}*/
 
 /******************************************************************************/
 /*                      Styling for the about section                         */
@@ -41,7 +52,6 @@ ul {
 }
 
 .about-content > h1 {
-    text-align: center;
     color: #32d25a !important;
     padding-bottom: 4%;
 }
@@ -75,7 +85,19 @@ ul {
 /*                     Styling for the contact section                        */
 /******************************************************************************/
 
+.inspiration-view {
+    background-color: white;
+    width: 100%;
+}
 
+.inspiration-content {
+    padding: 5%;
+}
+
+.inspiration-content > h1 {
+    color: #ff66ff !important;
+    padding-bottom: 4%; 
+}
 
 
 
