@@ -37,11 +37,6 @@
     padding-top: 50px;
 }
 
-/*.carousel-inner > .item > img {
-    width: 80%;
-    margin: auto;
-}*/
-
 /******************************************************************************/
 /*                      Styling for the about section                         */
 /******************************************************************************/
@@ -128,11 +123,3 @@
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
     padding-left: 4%;
 }
-
-
-
-
-
-
-
-
