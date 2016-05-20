@@ -3,4 +3,8 @@ $(document).ready(function () {
         interval: 3000,
         pause: false
     });
+
+    $('.anchor-scroll').anchorScroll({
+        scrollSpeed: 800
+    });
 });

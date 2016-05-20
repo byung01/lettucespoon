@@ -41,23 +41,18 @@ html(lang="en")
                         span.icon-bar
                 .navbar-collapse.collapse
                     ul.nav.navbar-nav
-                        li: a(href='#home') Home
-                        li: a(href='#about') About
-                        li: a(href='#contact') Contact
-                    ul.nav.navbar-nav.navbar-right
-                        li: a(href='#') Test1
-                        li: a(href='#') Test2
-                        li: a(href='#') Test3
+                        li: a(href='#home' class="anchor-scroll") Home
+                        li: a(href='#about' class="anchor-scroll") About
+                        li: a(href='#contact' class="anchor-scroll") Contact
         //- img(src='images/logo.png', alt='logo for lettucespoon')
-        .row
-            .view.photos
-                +carousel("photoroll",[
-                    {image: "images/dim-sum.jpg"},
-                    {image: "images/pancakes.jpg"},
-                    {image: "images/picnic.jpg"},
-                    {image: "images/salmon.jpg"},
-                    {image: "images/sushi.jpg"}
-                ])
+        .view.photos(id="home")
+            +carousel("photoroll",[
+                {image: "images/dim-sum.jpg"},
+                {image: "images/pancakes.jpg"},
+                {image: "images/picnic.jpg"},
+                {image: "images/salmon.jpg"},
+                {image: "images/sushi.jpg"}
+            ])
         .view.about-view(id="about")
             .about-content
                 h1 About the writer
@@ -70,6 +65,8 @@ html(lang="en")
                         p Do you have any questions on the recipes? Don't know what you should be eating for breakfast? Need a recommendation for where to eat on a first date? Don't hesitate to contact me! 
                         p To learn more about my hometown, visit my New York City cheat sheet,
                         p And to see where I've been eating in New Orleans, check my visitor's guide.
+        .view.contact-view(id="contact")
+
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
         script(src='scripts/jquery.anchorScroll-master/jquery.anchorScroll.min.js')

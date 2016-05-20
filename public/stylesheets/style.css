@@ -32,7 +32,7 @@ ul {
 /******************************************************************************/
 
 .about-view {
-    background-color: black;
+    background-color: white;
     width: 100%;
 }
 
@@ -42,7 +42,7 @@ ul {
 
 .about-content > h1 {
     text-align: center;
-    color: white !important;
+    color: #32d25a !important;
     padding-bottom: 4%;
 }
 
@@ -57,7 +57,7 @@ ul {
 }
 
 /* Resizes the profile image for mobiles */
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 767px) {
     .crop {
         width: 200px;
         height: 150px;
@@ -67,6 +67,20 @@ ul {
 }
 
 .about-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
-    color: white !important;
+    color: black !important;
     font-size: 15px;
 }
+
+/******************************************************************************/
+/*                     Styling for the contact section                        */
+/******************************************************************************/
+
+
+
+
+
+
+
+
+
+
