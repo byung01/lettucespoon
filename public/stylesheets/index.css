@@ -11,9 +11,6 @@
 /*                           Styling for page breaks                          */
 /******************************************************************************/
 
-.page-break {
-}
-
 .page-break > img {
     display: block;
     width: 80%;
