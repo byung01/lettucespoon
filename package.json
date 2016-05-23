@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "4.13.3",
     "mongodb": "latest",
+    "body-parser": "latest",
     "jade": "latest",
     "jade-bootstrap": "latest"
   },

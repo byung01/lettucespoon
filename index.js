@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var mongodb = require('mongodb');
+var bodyParser = require('body-parser');
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://heroku_7mgmv4x2:due2qgtm2gj5k1fatnl5246enk@ds023912.mlab.com:23912/heroku_7mgmv4x2';
 var MongoClient = mongodb.MongoClient, format = require('util').format;
@@ -8,9 +9,11 @@ var db = MongoClient.connect(mongoUri, function (error, databaseConnection) {
     db = databaseConnection;
 });
 
-app.set('port', (process.env.PORT || 5000));
-
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set('port', (process.env.PORT || 5000));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -36,6 +39,9 @@ app.get('/recipes', function (request, response) {
 });
 
 app.post('/addRecipe', function (request, response) {
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
     var meal_type = request.body.meal_type;
     var dish = request.body.dish;
     var description = request.body.description;
