@@ -42,13 +42,15 @@ html(lang="en")
                     a.navbar-brand(href='#home', class="anchor-scroll") LettuceSpoon
                 .navbar-collapse.collapse
                     ul.nav.navbar-nav
-                        li: a(href="#") Posts
+                        li: a.anchor-scroll(href='#about') About
+                        li: a.anchor-scroll(href='#inspiration') Inspiration
                     ul.nav.navbar-nav.navbar-right
                         li.dropdown
-                            a.dropdown-toggle(data-toggle="dropdown" href="#"): span.caret
+                            a.dropdown-toggle(data-toggle="dropdown" href="#") Posts <span class="caret"></span>
                             ul.dropdown-menu
-                                li: a.anchor-scroll(href='#about') About
-                                li: a.anchor-scroll(href='#inspiration') Inspiration
+                                li: a(href='#') Breakfast
+                                li: a(href='#') Restaurants
+                                li: a(href='#') Travel
         .view.photos(id="home")
             +carousel("photoroll",[
                 {image: "images/clementine.jpg"},
