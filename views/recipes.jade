@@ -1,0 +1,43 @@
+doctype html
+
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content=["width=device-width","initial-scale=1","minimum-scale=1","maximum-scale=1"])
+        link(href="stylesheets/breakfast.css", rel="stylesheet", type="text/css")
+        link(href="stylesheets/navbar.css", rel="stylesheet", type="text/css")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+        title LettuceSpoon Breakfast
+    body
+        .navbar.navbar-default.navbar-fixed-top(role='navigation')
+            .container-fluid
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand.anchor-scroll(href='/') LettuceSpoon
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li: a.anchor-scroll(href='#') About
+                        li: a.anchor-scroll(href='#') Inspiration
+                    ul.nav.navbar-nav.navbar-right
+                        li.dropdown
+                            a.dropdown-toggle(data-toggle="dropdown" href="#") Recipes <span class="caret"></span>
+                            ul.dropdown-menu
+                                li.active: a(href='#') Breakfast
+                                li: a(href='#') Lunch/Dinner
+                                li: a(href='#') Starters and Sides
+                                li: a(href='#') Desserts and Baked Goods
+                        li.dropdown
+                            a.dropdown-toggle(data-toggle="dropdown" href="#") Posts <span class="caret"></span>
+                            ul.dropdown-menu
+                                li: a(href='#') Breakfast
+                                li: a(href='#') Restaurants
+                                li: a(href='#') Travel
+        h1 Hi Hi
+        p Yo Yo
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
