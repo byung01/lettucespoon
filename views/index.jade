@@ -42,8 +42,13 @@ html(lang="en")
                     a.navbar-brand(href='#home', class="anchor-scroll") LettuceSpoon
                 .navbar-collapse.collapse
                     ul.nav.navbar-nav
-                        li: a(href='#about', class="anchor-scroll") About
-                        li: a(href='#inspiration', class="anchor-scroll") Inspiration
+                        li: a(href="#") Posts
+                    ul.nav.navbar-nav.navbar-right
+                        li.dropdown
+                            a.dropdown-toggle(data-toggle="dropdown" href="#"): span.caret
+                            ul.dropdown-menu
+                                li: a.anchor-scroll(href='#about') About
+                                li: a.anchor-scroll(href='#inspiration') Inspiration
         .view.photos(id="home")
             +carousel("photoroll",[
                 {image: "images/clementine.jpg"},

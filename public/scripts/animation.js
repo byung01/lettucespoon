@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     $('.nav').on('click', function (event) {
-        if ( $(event.target).is('a') ) {
+        if ( $(event.target).is('a.anchor-scroll') ) {
             $('.navbar-collapse').collapse('hide');
         }
     });
