@@ -25,12 +25,13 @@ app.get('/', function (request, response) {
 });
 
 /* Renders the recipe page depending on the meal type */
-app.get('/recipes', function (request, response) {
+app.get('/recipes_list', function (request, response) {
     var meal_type = request.query.meal_type;
 
     db.collection('recipes').find({"meal_type":meal_type}).toArray(function (error, recipes) {
         if ( !error ) {
-            response.render('recipes', {data: recipes});
+            response.send(recipes);
+            //response.render('recipes_list', {data: recipes});
         }
         else {
             response.sendStatus(500);
