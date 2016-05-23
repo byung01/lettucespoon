@@ -42,11 +42,9 @@ html(lang="en")
                     a.navbar-brand(href='#home', class="anchor-scroll") LettuceSpoon
                 .navbar-collapse.collapse
                     ul.nav.navbar-nav
-                        //- li: a(href='#home', class="anchor-scroll") Home
                         li: a(href='#about', class="anchor-scroll") About
                         li: a(href='#inspiration', class="anchor-scroll") Inspiration
         .view.photos(id="home")
-            //- img(src='images/logo2.png', id='logo', alt='logo for lettucespoon')
             +carousel("photoroll",[
                 {image: "images/clementine.jpg"},
                 {image: "images/fried-rice.jpg"},
@@ -83,6 +81,7 @@ html(lang="en")
                         p A.A. Milne, <i>Positively Pooh</i>
                     .col-xs-12.col-sm-6.col-md-4
                         img(src="images/pooh.jpg", alt="Winnie the pooh quote")
+
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
         script(src='scripts/jquery.anchorScroll-master/jquery.anchorScroll.min.js')

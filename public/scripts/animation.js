@@ -9,7 +9,9 @@ $(document).ready(function () {
         offsetTop: 50
     });
 
-    $('.nav a').on('click', function(){
-        $('.navbar-toggle').click()
+    $('.nav').on('click', function (event) {
+        if ( $(event.target).is('a') ) {
+            $('.navbar-collapse').collapse('hide');
+        }
     });
 });
