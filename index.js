@@ -40,6 +40,20 @@ app.get('/recipes_list', function (request, response) {
     });
 });
 
+/* For testing */
+app.post('/getRecipes', function (request, response) {
+    var meal_type = request.body.meal_type;
+
+    db.collection('recipes').find({"meal_type":meal_type}).toArray(function (error, recipes) {
+        if ( !error ) {
+            response.send(recipes);
+        }
+        else {
+            response.sendStatus(500);
+        }
+    });
+});
+
 app.post('/addRecipe', function (request, response) {
     response.header("Access-Control-Allow-Origin", "*");
     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

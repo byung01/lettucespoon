@@ -20,4 +20,9 @@ $(document).ready(function () {
     };
 
     $(recipe_types[index]).addClass('active');
+
+    /* FOR TESTING */
+    $.post("http://localhost:5000/getRecipes",{"meal_type":meal_type},function (data) {
+        console.log(data);
+    });
 });
