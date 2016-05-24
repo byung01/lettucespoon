@@ -3,16 +3,21 @@ $(document).ready(function () {
     var url = window.location.search;
     var meal_type = url.substring(url.indexOf('=') + 1);
 
-    if (meal_type === "breakfast") {
-        $(recipe_types[0]).addClass('active');
-    }
-    else if (meal_type === "lunch/dinner") {
-        $(recipe_types[1]).addClass('active');
-    }
-    else if (meal_type === "starters/sides") {
-        $(recipe_types[2]).addClass('active');
-    }
-    else {
-        $(recipe_types[3]).addClass('active');
-    }
+    var index = 0;
+    switch(meal_type) {
+        case "breakfast":
+            index = 0;
+            break;
+        case "lunch/dinner":
+            index = 1;
+            break;
+        case "starters/sides":
+            index = 2;
+            break;
+        case "desserts":
+            index = 3;
+            break;
+    };
+
+    $(recipe_types[index]).addClass('active');
 });
