@@ -30,7 +30,8 @@ app.get('/recipes_list', function (request, response) {
 
     db.collection('recipes').find({"meal_type":meal_type}).toArray(function (error, recipes) {
         if ( !error ) {
-            response.send(recipes);
+            response.render('recipes_list')
+            //response.send(recipes);
             //response.render('recipes_list', {data: recipes});
         }
         else {

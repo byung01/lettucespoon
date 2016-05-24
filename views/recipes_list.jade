@@ -25,17 +25,17 @@ html(lang="en")
                     ul.nav.navbar-nav.navbar-right
                         li.dropdown
                             a.dropdown-toggle(data-toggle="dropdown" href="#") Recipes <span class="caret"></span>
-                            ul.dropdown-menu
-                                li.active: a(href='#') Breakfast
-                                li: a(href='#') Lunch/Dinner
-                                li: a(href='#') Starters and Sides
-                                li: a(href='#') Desserts and Baked Goods
+                            ul.dropdown-menu.recipes
+                                li: a(href='/recipes_list?meal_type=breakfast') Breakfast
+                                li: a(href='/recipes_list?meal_type=lunch/dinner') Lunch/Dinner
+                                li: a(href='/recipes_list?meal_type=starters/sides') Starters and Sides
+                                li: a(href='/recipes_list?meal_type=desserts') Desserts and Baked Goods
                         li.dropdown
                             a.dropdown-toggle(data-toggle="dropdown" href="#") Posts <span class="caret"></span>
                             ul.dropdown-menu
                                 li: a(href='#') Breakfast
                                 li: a(href='#') Restaurants
                                 li: a(href='#') Travel
-        data
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
+        script(src='scripts/recipes-animation.js')
