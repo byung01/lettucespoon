@@ -30,9 +30,7 @@ app.get('/recipes_list', function (request, response) {
 
     db.collection('recipes').find({"meal_type":meal_type}).toArray(function (error, recipes) {
         if ( !error ) {
-            response.render('recipes_list')
-            //response.send(recipes);
-            //response.render('recipes_list', {data: recipes});
+            response.render('recipes_list', {data: recipes});
         }
         else {
             response.sendStatus(500);
@@ -60,6 +58,7 @@ app.post('/addRecipe', function (request, response) {
 
     var meal_type = request.body.meal_type;
     var dish = request.body.dish;
+    var description_short = request.body.description_short;
     var description = request.body.description;
     var recipe = request.body.recipe;
 
@@ -67,6 +66,7 @@ app.post('/addRecipe', function (request, response) {
     var toInsert = {
         "meal_type" : meal_type,
         "dish" : dish,
+        "description_short" : description_short,
         "description" : description,
         "recipe" : recipe
     };
