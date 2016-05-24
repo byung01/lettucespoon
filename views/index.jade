@@ -5,14 +5,14 @@ mixin carousel(id, items)
         //- Indicators
         ol.carousel-indicators
             each item,index in items
-                if(index === 0)
+                if (index === 0)
                     li.active(data-target="#carousel-#{id}", data-slide-to="#{index}")
                 else
                     li(data-target="#carousel-#{id}", data-slide-to="#{index}")
         //- Wrapper for slides
         .carousel-inner(role="listbox")
             each item,index in items
-                if(index === 0)
+                if (index === 0)
                     .item.active
                         img(src="#{item.image}", alt="Food image")
                 else
