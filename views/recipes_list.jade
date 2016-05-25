@@ -2,16 +2,25 @@ doctype html
 
 mixin recipes-list-builder(recipes)
     if recipes
-        each recipe in recipes
-            h1 #{recipe.dish}
-            p #{recipe.description_short}
+        each dish in recipes
+            +recipe-box(dish, dish.recipe)
         else
             h1 No recipes to show
+
+mixin recipe-box(dish, recipe)
+    .col-xs-12.col-sm-6.col-md-4
+        .recipe-box
+            .recipe-box-heading
+                p #{dish.dish}
+            .recipe-box-body-layout
+                .recipe-box-body
+                    p #{dish.description_short}
+
 
 html(lang="en")
     head
         meta(charset="utf-8")
-        meta(name="viewport", content=["width=device-width","initial-scale=1","minimum-scale=1","maximum-scale=1"])
+        meta(name="viewport", content=["width=device-width","initial-scale=1"])
         link(href="stylesheets/recipes_list.css", rel="stylesheet", type="text/css")
         link(href="stylesheets/navbar.css", rel="stylesheet", type="text/css")
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
@@ -44,7 +53,8 @@ html(lang="en")
                                 li: a(href='#') Breakfast
                                 li: a(href='#') Restaurants
                                 li: a(href='#') Travel
-        +recipes-list-builder(data)
+        .view.recipe-list
+            +recipes-list-builder(data)
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")

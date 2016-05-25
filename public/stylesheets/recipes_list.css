@@ -2,20 +2,39 @@
     background-color: #ff66ff !important;
 }
 
-h1 {
-    padding-top: 50px;
+.view {
+    display: block;
+    overflow: auto;
+}
+
+/******************************************************************************/
+/*                Styling for the each recipe box in list view                */
+/******************************************************************************/
+
+.recipe-list {
+    padding-top: 55px;
 }
 
 .recipe-box {
     background: none;
+    border: 5px solid red;
+    height: 300px;
 }
 
-.recipe-box > .recipe-box-heading {
+.recipe-box-heading {
     background-color: black;
     text-transform: uppercase;
     color: white;
+    height: 50px;
 }
 
-.recipe-box > .recipe-box-body {
-    background-color: white;
+.recipe-box-heading > p {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.recipe-box-body-layout > .recipe-box-body {
+    height: 250px;
+    overflow: scroll;
 }
