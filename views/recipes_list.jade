@@ -14,9 +14,13 @@ mixin recipe-box(dish, recipe)
                 p #{dish.dish}
             .recipe-box-body-layout
                 .recipe-box-body
-                    each paragraph in dish.description
-                        p #{paragraph}
-                        
+                    p <b>Description:</b>
+                    p #{dish.description_short}
+                    p <b>Ingredients:</b>
+                    ol
+                        each ingredient in recipe.ingredients
+                            li <p>#{ingredient}</p>
+
 html(lang="en")
     head
         meta(charset="utf-8")
