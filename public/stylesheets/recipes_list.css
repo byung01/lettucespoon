@@ -12,7 +12,10 @@
 /******************************************************************************/
 
 .recipe-list {
-    padding-top: 55px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .recipe-box {
@@ -37,4 +40,8 @@
 .recipe-box-body-layout > .recipe-box-body {
     height: 250px;
     overflow: scroll;
+}
+
+.recipe-box-body {
+    padding: 3%;
 }
