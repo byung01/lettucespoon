@@ -5,3 +5,17 @@
 h1 {
     padding-top: 50px;
 }
+
+.recipe-box {
+    background: none;
+}
+
+.recipe-box > .recipe-box-heading {
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+}
+
+.recipe-box > .recipe-box-body {
+    background-color: white;
+}
