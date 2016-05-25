@@ -40,6 +40,10 @@ app.get('/recipes_list', function (request, response) {
 
 /* For testing */
 app.post('/getRecipes', function (request, response) {
+    /* May need to delete these two lines in the future (security reasons) */
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
     var meal_type = request.body.meal_type;
 
     db.collection('recipes').find({"meal_type":meal_type}).toArray(function (error, recipes) {
