@@ -33,33 +33,36 @@
 }
 
 .recipe-box-heading {
-    background-color: gray;
+    /*background-color: transparent;*/
     width: 100%;
-    height: 50px;
-    color: white;
+    height: 70px;
+    text-align: center;
     font-family: 'Muli', sans-serif;
 }
 
 .recipe-box-heading > h1 {
     display: block;
-    text-align: center;
     font-size: 17px;
     padding-top: 4%;
 }
 
 .recipe-box-heading > h1 > a {
-    color: white;
+    color: black;
 }
 
 .recipe-box-heading > h1 > a:hover {
     color: #ff66ff;
 }
 
+.recipe-box-heading > img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
 .recipe-box-body {
     overflow: scroll;
     height: 250px;
-    padding-top: 3%;
     padding-right: 3%;
     padding-left: 3%;
-    padding-bottom: 3%;
 }
