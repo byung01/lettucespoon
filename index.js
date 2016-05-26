@@ -24,7 +24,7 @@ app.get('/', function (request, response) {
     response.render('index');
 });
 
-/* Renders the recipe page depending on the meal type */
+/* Renders the recipe list depending on the meal type */
 app.get('/recipes_list', function (request, response) {
     var meal_type = request.query.meal_type;
 
@@ -36,6 +36,11 @@ app.get('/recipes_list', function (request, response) {
             response.sendStatus(500);
         }
     });
+});
+
+/* Renders the page for a single recipe */
+app.get('/recipe', function (request, response) {
+    response.render('recipe');
 });
 
 /* For testing */
