@@ -11,13 +11,13 @@ mixin recipe-box(dish, recipe)
     .col-xs-12.col-sm-6.col-md-4
         .recipe-box
             .recipe-box-heading
-                p #{dish.dish}
+                h1 #{dish.dish}
             .recipe-box-body-layout
                 .recipe-box-body
                     p <b>Description:</b>
                     p #{dish.description_short}
                     p <b>Ingredients:</b>
-                    ol
+                    ul
                         each ingredient in recipe.ingredients
                             li <p>#{ingredient}</p>
 
@@ -28,6 +28,7 @@ html(lang="en")
         link(href="stylesheets/recipes_list.css", rel="stylesheet", type="text/css")
         link(href="stylesheets/navbar.css", rel="stylesheet", type="text/css")
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+        link(href='https://fonts.googleapis.com/css?family=Muli', rel="stylesheet" type='text/css')
         title LettuceSpoon Recipes
     body
         .navbar.navbar-default.navbar-fixed-top(role='navigation')

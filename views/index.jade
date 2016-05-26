@@ -26,9 +26,11 @@ mixin carousel(id, items)
 html(lang="en")
     head
         meta(charset="utf-8")
-        meta(name="viewport", content=["width=device-width","initial-scale=1","minimum-scale=1","maximum-scale=1"])
+        meta(name="viewport", content=["width=device-width","initial-scale=1"])
         link(href="stylesheets/index.css", rel="stylesheet", type="text/css")
         link(href="stylesheets/navbar.css", rel="stylesheet", type="text/css")
+        link(href='https://fonts.googleapis.com/css?family=Muli', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet', type='text/css')
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
         title LettuceSpoon
     body
@@ -72,7 +74,7 @@ html(lang="en")
             img(src="images/pagebreak.png", alt="Page break image")
         .view.about-view(id="about")
             .about-content
-                h1 About the writer
+                h1 About the Writer
                 .row
                     .col-xs-12.col-sm-6.col-md-4
                         .crop
