@@ -50,9 +50,11 @@
 }
 
 .about-content > h1 {
-    color: #32d25a !important;
-    padding-bottom: 3%;
-    font-family: 'Muli', sans-serif;
+    color: #ff66ff !important;
+    padding-bottom: 2%;
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 50px;
+    text-align: center;
 }
 
 .about-content > .row > .col-xs-12.col-sm-6.col-md-4 > .crop > img {
@@ -103,12 +105,15 @@
 
 .inspiration-content > h1 {
     color: #ff66ff !important;
-    padding-bottom: 3%; 
-    font-family: 'Muli', sans-serif;
+    padding-bottom: 2%; 
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 50px;
+    text-align: center;
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote {
     font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote > br {

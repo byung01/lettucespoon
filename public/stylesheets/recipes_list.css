@@ -11,11 +11,18 @@
 /*                Styling for the each recipe box in list view                */
 /******************************************************************************/
 
+.page-bg {
+    background-image: url(../images/cutting-board.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
 .recipe-list {
-    margin-top: 55px;
+    margin-top: 50px;
     padding-left: 2%;
     padding-right: 2%;
-    /*height: 300px;*/
 }
 
 .recipe-box {
@@ -38,6 +45,14 @@
     text-align: center;
     font-size: 17px;
     padding-top: 4%;
+}
+
+.recipe-box-heading > h1 > a {
+    color: white;
+}
+
+.recipe-box-heading > h1 > a:hover {
+    color: #ff66ff;
 }
 
 .recipe-box-body {

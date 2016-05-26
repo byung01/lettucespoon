@@ -4,7 +4,8 @@
 
 .navbar-brand {
     color: #32d25a !important;
-    font-size: 20px !important;
+    font-size: 30px !important;
+    font-family: 'Great Vibes', sans-serif;
 }
 
 @media only screen and (max-width: 767px) {
