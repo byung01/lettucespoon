@@ -40,7 +40,26 @@ app.get('/recipes_list', function (request, response) {
 
 /* Renders the page for a single recipe */
 app.get('/recipe', function (request, response) {
-    response.render('recipe');
+    var dish = "";
+    var temp_dish = request.query.dish;
+
+    for (var i = 0; i < temp_dish.length; i++) {
+        if (temp_dish[i] === "%" || temp_dish[i] === "2" || temp_dish[i] === "0") {
+            continue;
+        }
+        else {
+            dish += temp_dish[i];
+        }
+    }
+
+    db.collection('recipes').find({"dish":dish}).toArray(function (error, dish) {
+        if ( !error ) {
+            response.render('recipe', {data: dish});
+        }
+        else {
+            response.sendStatus(500);
+        }
+    });
 });
 
 /* For testing */
