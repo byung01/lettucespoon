@@ -32,6 +32,8 @@ html(lang="en")
         link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Great+Vibes', rel='stylesheet', type='text/css')
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css", rel="stylesheet", type="text/css")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css", rel="stylesheet", type="text/css")
         title LettuceSpoon
     body
         .navbar.navbar-default.navbar-fixed-top(role='navigation')
@@ -51,55 +53,59 @@ html(lang="en")
                         li.dropdown
                             a.dropdown-toggle(data-toggle="dropdown" href="#") Recipes <span class="caret"></span>
                             ul.dropdown-menu
-                                li: a(href='/recipes_list?meal_type=breakfast') Breakfast
-                                li: a(href='/recipes_list?meal_type=lunch/dinner') Lunch and Dinner
-                                li: a(href='/recipes_list?meal_type=starters/sides') Starters and Sides
-                                li: a(href='/recipes_list?meal_type=desserts') Desserts and Baked Goods
+                                li: a.animsition-link(href='/recipes_list?meal_type=breakfast') Breakfast
+                                li: a.animsition-link(href='/recipes_list?meal_type=lunch/dinner') Lunch and Dinner
+                                li: a.animsition-link(href='/recipes_list?meal_type=starters/sides') Starters and Sides
+                                li: a.animsition-link(href='/recipes_list?meal_type=desserts') Desserts and Baked Goods
                         li.dropdown
                             a.dropdown-toggle(data-toggle="dropdown" href="#") Posts <span class="caret"></span>
                             ul.dropdown-menu
                                 li: a(href='#') Breakfast
                                 li: a(href='#') Restaurants
                                 li: a(href='#') Travel
-        .view.photos(id="home")
-            +carousel("photoroll",[
-                {image: "images/clementine.jpg"},
-                {image: "images/fried-rice.jpg"},
-                {image: "images/granola.jpg"},
-                {image: "images/home-cooking.jpg"},
-                {image: "images/ramen.jpg"},
-                {image: "images/sandwich.jpg"}
-            ])
-        .page-break
-            img(src="images/pagebreak.png", alt="Page break image")
-        .view.about-view(id="about")
-            .about-content
-                h1 About the Writer
-                .row
-                    .col-xs-12.col-sm-6.col-md-4
-                        .crop
-                            img(src="images/linda_selfie.jpg", alt="Profile for Linda")
-                    .col-xs-12.col-sm-6.col-md-8
-                        p I live to eat, and I eat to live. LettuceSpoon is where I combine my interests in delicious foods and balanced nutrition. I am Linda Yung, a Registered Dietitian and masters of Food Policy and Applied Nutrition from Tufts Friedman. I am a die-hard New Yorker with lofty goals of changing the ways Americans perceive food. I can also be described as an aspiring jet-setter, amateur tai chi master, and novice stargazer. On the real, I enjoy meandering through foreign markets, I spend too much time reading science fiction, and I experiment a lot in the kitchen. I hope Lettuce Spoon will provide you with some insight on my gastronomic lifestyle and perhaps a pinch of inspiration as well.
-                        p Do you have any questions on the recipes? Don't know what you should be eating for breakfast? Need a recommendation for where to eat on a first date? Don't hesitate to contact me! 
-                        p To learn more about my hometown, visit my New York City cheat sheet,
-                        p And to see where I've been eating in New Orleans, check my visitor's guide.
-        .page-break
-            img(src="images/pagebreak.png", alt="Page break image")
-        .view.inspiration-view(id="inspiration")
-            .inspiration-content
-                h1 The Inspiration
-                .row
-                    .col-xs-12.col-sm-6.col-md-8
-                        blockquote "What do you like doing best in the world, Pooh?" asked Tigger. <br> "Well," said Pooh, "what I like best --" and then he had to stop to think. Because although eating honey was  a very good thing to do, there was a moment just before you began to eat it which was better than when you were, but he didn't know what it was called.
-                        hr
-                        blockquote "When you wake up in the morning, Pooh," said Piglet at last, "what's the first thing you say to yourself?" <br> "What's for breakfast?" said Pooh. "What do you say piglet?" <br> "I say, I wonder what's going to happen exciting today!"said Piglet. <br> Pooh nodded thoughtfully. <br> "It's the same thing," he said.
-                        hr
-                        p A.A. Milne, <i>Positively Pooh</i>
-                    .col-xs-12.col-sm-6.col-md-4
-                        img(src="images/pooh.jpg", alt="Winnie the pooh quote")
+        .animsition
+            .view.photos(id="home")
+                +carousel("photoroll",[
+                    {image: "images/clementine.jpg"},
+                    {image: "images/fried-rice.jpg"},
+                    {image: "images/granola.jpg"},
+                    {image: "images/home-cooking.jpg"},
+                    {image: "images/ramen.jpg"},
+                    {image: "images/sandwich.jpg"}
+                ])
+            .page-break
+                img(src="images/pagebreak.png", alt="Page break image")
+            .view.about-view(id="about")
+                .about-content
+                    h1 About the Writer
+                    .row
+                        .col-xs-12.col-sm-6.col-md-4
+                            .crop
+                                img(src="images/linda_selfie.jpg", alt="Profile for Linda")
+                        .col-xs-12.col-sm-6.col-md-8
+                            p I live to eat, and I eat to live. LettuceSpoon is where I combine my interests in delicious foods and balanced nutrition. I am Linda Yung, a Registered Dietitian and masters of Food Policy and Applied Nutrition from Tufts Friedman. I am a die-hard New Yorker with lofty goals of changing the ways Americans perceive food. I can also be described as an aspiring jet-setter, amateur tai chi master, and novice stargazer. On the real, I enjoy meandering through foreign markets, I spend too much time reading science fiction, and I experiment a lot in the kitchen. I hope Lettuce Spoon will provide you with some insight on my gastronomic lifestyle and perhaps a pinch of inspiration as well.
+                            p Do you have any questions on the recipes? Don't know what you should be eating for breakfast? Need a recommendation for where to eat on a first date? Don't hesitate to contact me! 
+                            p To learn more about my hometown, visit my New York City cheat sheet,
+                            p And to see where I've been eating in New Orleans, check my visitor's guide.
+            .page-break
+                img(src="images/pagebreak.png", alt="Page break image")
+            .view.inspiration-view(id="inspiration")
+                .inspiration-content
+                    h1 The Inspiration
+                    .row
+                        .col-xs-12.col-sm-6.col-md-8
+                            blockquote "What do you like doing best in the world, Pooh?" asked Tigger. <br> "Well," said Pooh, "what I like best --" and then he had to stop to think. Because although eating honey was  a very good thing to do, there was a moment just before you began to eat it which was better than when you were, but he didn't know what it was called.
+                            hr
+                            blockquote "When you wake up in the morning, Pooh," said Piglet at last, "what's the first thing you say to yourself?" <br> "What's for breakfast?" said Pooh. "What do you say piglet?" <br> "I say, I wonder what's going to happen exciting today!"said Piglet. <br> Pooh nodded thoughtfully. <br> "It's the same thing," he said.
+                            hr
+                            p A.A. Milne, <i>Positively Pooh</i>
+                        .col-xs-12.col-sm-6.col-md-4
+                            img(src="images/pooh.jpg", alt="Winnie the pooh quote")
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
         script(src='scripts/jquery.anchorScroll-master/jquery.anchorScroll.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js')
         script(src='scripts/index-animation.js')
+        script(src='scripts/page-animation.js')
