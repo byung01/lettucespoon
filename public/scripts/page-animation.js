@@ -21,4 +21,11 @@ $(document).ready(function () {
         overlayParentElement : 'body',
         transition: function(url){ window.location.href = url; }
     });
+
+    // Animation for navbar dropdowns
+    $("li.dropdown").mouseover(function () {
+        $(this).addClass('open');
+    }).mouseout(function () {
+        $(this).removeClass('open').collapse('hide');
+    });
 });

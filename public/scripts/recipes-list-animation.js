@@ -17,6 +17,8 @@ $(document).ready(function () {
         case "desserts":
             index = 3;
             break;
+        default:
+            index = 4;
     };
 
     $(recipe_types[index]).addClass('active');
