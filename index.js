@@ -24,24 +24,41 @@ app.get('/', function (request, response) {
     response.render('index');
 });
 
+/* Renders the about page */
+app.get('/about', function (request, response) {
+    response.render('about');
+});
+
 /* Renders the recipe list depending on the meal type */
 app.get('/recipes_list', function (request, response) {
     var meal_type = request.query.meal_type;
 
-    db.collection('recipes').find({"meal_type":meal_type}).toArray(function (error, recipes) {
-        if ( !error ) {
-            response.render('recipes_list', {data: recipes});
-        }
-        else {
-            response.sendStatus(500);
-        }
-    });
+    if (meal_type === "all") {
+        db.collection('recipes').find().toArray(function (error, recipes) {
+            if ( !error ) {
+                response.render('recipes_list', {data: recipes});
+            }
+            else {
+                response.sendStatus(500);
+            }
+        });
+    }
+    else {
+        db.collection('recipes').find({"meal_type":meal_type}).toArray(function (error, recipes) {
+            if ( !error ) {
+                response.render('recipes_list', {data: recipes});
+            }
+            else {
+                response.sendStatus(500);
+            }
+        });
+    }
 });
 
 /* Renders the page for a single recipe */
 app.get('/recipe', function (request, response) {
-    var dish = "";
     var temp_dish = request.query.dish;
+    var dish = "";
 
     for (var i = 0; i < temp_dish.length; i++) {
         if (temp_dish[i] === "%" || temp_dish[i] === "2" || temp_dish[i] === "0") {

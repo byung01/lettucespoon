@@ -12,9 +12,8 @@ mixin recipe-box(dish, recipe)
         .recipe-box
             .recipe-box-heading
                 - var link = {href: '/recipe?dish=' + dish.dish}
-                h1: a(href='#') #{dish.dish}
+                h1: a(href=link.href) #{dish.dish}
                 img(src='images/pagebreak.png' alt='Page break')
-                - var p = dish
             .recipe-box-body-layout
                 .recipe-box-body
                     p: b Description:
@@ -45,18 +44,25 @@ html(lang="en")
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand.animisition-link(href='/') LettuceSpoon
+                    a.navbar-brand.animsition-link(href='/') LettuceSpoon
                 .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li.dropdown
+                            a(href='/about') About <span class="caret"></span>
+                            ul.dropdown-menu
+                                li: a.animsition-link(href='/about#writer') The Writer
+                                li: a.animsition-link(href='/about#inspiration') The Inspiration
                     ul.nav.navbar-nav.navbar-right
                         li.dropdown
-                            a.dropdown-toggle(data-toggle="dropdown" href="#") Recipes <span class="caret"></span>
+                            a(href='#') Recipes <span class="caret"></span>
                             ul.dropdown-menu.recipes
                                 li: a.animsition-link(href='/recipes_list?meal_type=breakfast') Breakfast
                                 li: a.animsition-link(href='/recipes_list?meal_type=lunch/dinner') Lunch and Dinner
                                 li: a.animsition-link(href='/recipes_list?meal_type=starters/sides') Starters and Sides
                                 li: a.animsition-link(href='/recipes_list?meal_type=desserts') Desserts and Baked Goods
+                                li: a.animsition-link(href='/recipes_list?meal_type=all') All of the above
                         li.dropdown
-                            a.dropdown-toggle(data-toggle="dropdown" href="#") Posts <span class="caret"></span>
+                            a(href='#') Posts <span class="caret"></span>
                             ul.dropdown-menu
                                 li: a(href='#') Breakfast
                                 li: a(href='#') Restaurants

@@ -4,7 +4,11 @@ mixin recipe_template(dish)
     if dish
         each d in dish
             h1 #{d.dish}
-            h1 #{d.description_short}
+            if d.description
+                each paragraph in d.description
+                    h1 #{paragraph}
+            else
+                h1 #{d.description_short}
     else
         h1 No recipe to show
 
@@ -14,6 +18,7 @@ html
         meta(name="viewport", content=["width=device-width","initial-scale=1","minimum-scale=1","maximum-scale=1"])
         link(href="stylesheets/navbar.css", rel="stylesheet", type="text/css")
         link(href="stylesheets/recipe.css", rel="stylesheet", type="text/css")
+        link(href='https://fonts.googleapis.com/css?family=Great+Vibes', rel='stylesheet', type='text/css')
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
         link(href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css", rel="stylesheet", type="text/css")
         link(href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css", rel="stylesheet", type="text/css")
@@ -27,18 +32,25 @@ html
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand.animisition-link(href='/') LettuceSpoon
+                    a.navbar-brand.animsition-link(href='/') LettuceSpoon
                 .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li.dropdown
+                            a(href='/about') About <span class="caret"></span>
+                            ul.dropdown-menu
+                                li: a.animsition-link(href='/about#writer') The Writer
+                                li: a.animsition-link(href='/about#inspiration') The Inspiration
                     ul.nav.navbar-nav.navbar-right
                         li.dropdown
-                            a.dropdown-toggle(data-toggle="dropdown" href="#") Recipes <span class="caret"></span>
-                            ul.dropdown-menu.recipes
+                            a(href='#') Recipes <span class="caret"></span>
+                            ul.dropdown-menu
                                 li: a.animsition-link(href='/recipes_list?meal_type=breakfast') Breakfast
                                 li: a.animsition-link(href='/recipes_list?meal_type=lunch/dinner') Lunch and Dinner
                                 li: a.animsition-link(href='/recipes_list?meal_type=starters/sides') Starters and Sides
                                 li: a.animsition-link(href='/recipes_list?meal_type=desserts') Desserts and Baked Goods
+                                li: a.animsition-link(href='/recipes_list?meal_type=all') All of the above
                         li.dropdown
-                            a.dropdown-toggle(data-toggle="dropdown" href="#") Posts <span class="caret"></span>
+                            a(href='#') Posts <span class="caret"></span>
                             ul.dropdown-menu
                                 li: a(href='#') Breakfast
                                 li: a(href='#') Restaurants
