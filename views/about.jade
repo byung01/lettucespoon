@@ -2,15 +2,9 @@ doctype html
 
 html
     head
-        meta(charset="utf-8")
-        meta(name="viewport", content=["width=device-width","initial-scale=1","minimum-scale=1","maximum-scale=1"])
+        include includes/header.jade
         link(href="stylesheets/about.css", rel="stylesheet", type="text/css")
-        link(href="stylesheets/navbar.css", rel="stylesheet", type="text/css")
-        link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet', type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Great+Vibes', rel='stylesheet', type='text/css')
-        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
-        link(href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css", rel="stylesheet", type="text/css")
-        link(href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css", rel="stylesheet", type="text/css")
+        title About the Website
     body
         .navbar.navbar-default.navbar-fixed-top(role='navigation')
             .container-fluid
@@ -70,10 +64,5 @@ html
                     .col-xs-12.col-sm-6.col-md-4
                         img(src="images/pooh.jpg", alt="Winnie the pooh quote")
 
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
-        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
-        script(src='scripts/jquery.anchorScroll-master/jquery.anchorScroll.min.js')
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.js')
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js')
+        include includes/footer.jade
         script(src='scripts/about-animation.js')
-        script(src='scripts/page-animation.js')

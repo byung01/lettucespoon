@@ -23,11 +23,11 @@ $(document).ready(function () {
     });
 
     // Animation for navbar dropdowns
-    $('.nav').on('click', function (event) {
-        if ( $(event.target).is('a.anchor-scroll') ) {
-            $('.navbar-collapse').collapse('hide');
-        }
-    });
+    // $('.nav').on('click', function (event) {
+    //     if ( $(event.target).is('a.anchor-scroll') ) {
+    //         $('.navbar-collapse').collapse('hide');
+    //     }
+    // });
 
     $("li.dropdown").mouseover(function () {
         $(this).addClass('open');
