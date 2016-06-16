@@ -1,0 +1,34 @@
+/******************************************************************************/
+/*                                 Variables                                  */
+/******************************************************************************/
+
+/* Colors */
+$pink: #ff66ff !important;
+$green: #32d25a !important;
+$dark-gray: #ddd !important;
+$light-gray: #888 !important;
+
+/* Fonts */
+$Great-Vibes: 'Great Vibes', sans-serif;
+$Noto-Sans: 'Noto Sans', sans-serif;
+$Muli: 'Muli', sans-serif;
+
+/******************************************************************************/
+/*                                   Mixins                                   */
+/******************************************************************************/
+
+/* About page */
+@mixin content_layout() {
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 3%;
+}
+
+@mixin content_header() {
+    color: $pink;
+    padding-bottom: 2%;
+    font-family: $Great-Vibes;
+    font-size: 50px;
+    text-align: center;
+}

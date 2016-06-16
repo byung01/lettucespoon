@@ -1,23 +1,4 @@
 /******************************************************************************/
-/*                             Reusable Styling                               */
-/******************************************************************************/
-
-.view {
-    display: block;
-    overflow: auto;
-}
-
-/******************************************************************************/
-/*                           Styling for page breaks                          */
-/******************************************************************************/
-
-.page-break > img {
-    display: block;
-    width: 80%;
-    margin: auto;
-}
-
-/******************************************************************************/
 /*                      Styling for the about section                         */
 /******************************************************************************/
 
@@ -28,18 +9,11 @@
 }
 
 .writer-content {
-    padding-top: 1%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 3%;
+    @include content_layout();
 }
 
 .writer-content > h1 {
-    color: #ff66ff !important;
-    padding-bottom: 2%;
-    font-family: 'Great Vibes', sans-serif;
-    font-size: 50px;
-    text-align: center;
+    @include content_header();
 }
 
 .writer-content > .row > .col-xs-12.col-sm-6.col-md-4 > .crop > img {
@@ -69,7 +43,7 @@
 .writer-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
     color: black !important;
     font-size: 17px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $Noto-Sans;
 }
 
 /******************************************************************************/
@@ -82,23 +56,16 @@
 }
 
 .inspiration-content {
-    padding-top: 1%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 3%;
+    @include content_layout();
 }
 
 .inspiration-content > h1 {
-    color: #ff66ff !important;
-    padding-bottom: 2%; 
-    font-family: 'Great Vibes', sans-serif;
-    font-size: 50px;
-    text-align: center;
+    @include content_header();
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote {
     font-size: 16px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $Noto-Sans;
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote > br {

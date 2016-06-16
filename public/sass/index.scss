@@ -1,0 +1,30 @@
+/******************************************************************************/
+/*                    Styling to create sections on pages                     */
+/******************************************************************************/
+
+.view {
+    display: block;
+    overflow: auto;
+}
+
+.page-break > img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+/******************************************************************************/
+/*                         Styling for image carousel                         */
+/******************************************************************************/
+
+.carousel {
+    margin-bottom: 5%;
+}
+
+.carousel-control {
+    width: 8% !important;
+}
+
+.photos {
+    padding-top: 50px;
+}
