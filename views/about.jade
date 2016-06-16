@@ -2,7 +2,7 @@ doctype html
 
 html(lang="en")
     head
-        include includes/header.jade
+        include _includes/header.jade
         link(href="stylesheets/about.css", rel="stylesheet", type="text/css")
         title About the Website
     body
@@ -37,32 +37,33 @@ html(lang="en")
                                 li: a(href='#') Breakfast
                                 li: a(href='#') Restaurants
                                 li: a(href='#') Travel
-        .view.writer-view(id="writer")
-            .writer-content
-                h1 About the Writer
-                .row
-                    .col-xs-12.col-sm-6.col-md-4
-                        .crop
-                            img(src="images/linda_selfie.jpg", alt="Profile for Linda")
-                    .col-xs-12.col-sm-6.col-md-8
-                        p I live to eat, and I eat to live. LettuceSpoon is where I combine my interests in delicious foods and balanced nutrition. I am Linda Yung, a Registered Dietitian and masters of Food Policy and Applied Nutrition from Tufts Friedman. I am a die-hard New Yorker with lofty goals of changing the ways Americans perceive food. I can also be described as an aspiring jet-setter, amateur tai chi master, and novice stargazer. On the real, I enjoy meandering through foreign markets, I spend too much time reading science fiction, and I experiment a lot in the kitchen. I hope Lettuce Spoon will provide you with some insight on my gastronomic lifestyle and perhaps a pinch of inspiration as well.
-                        p Do you have any questions on the recipes? Don't know what you should be eating for breakfast? Need a recommendation for where to eat on a first date? Don't hesitate to contact me! 
-                        p To learn more about my hometown, visit my New York City cheat sheet,
-                        p And to see where I've been eating in New Orleans, check my visitor's guide.
-        .page-break
-            img(src="images/pagebreak.png", alt="Page break image")
-        .view.inspiration-view(id="inspiration")
-            .inspiration-content
-                h1 The Inspiration
-                .row
-                    .col-xs-12.col-sm-6.col-md-8
-                        blockquote "What do you like doing best in the world, Pooh?" asked Tigger. <br> "Well," said Pooh, "what I like best --" and then he had to stop to think. Because although eating honey was  a very good thing to do, there was a moment just before you began to eat it which was better than when you were, but he didn't know what it was called.
-                        hr
-                        blockquote "When you wake up in the morning, Pooh," said Piglet at last, "what's the first thing you say to yourself?" <br> "What's for breakfast?" said Pooh. "What do you say piglet?" <br> "I say, I wonder what's going to happen exciting today!"said Piglet. <br> Pooh nodded thoughtfully. <br> "It's the same thing," he said.
-                        hr
-                        p A.A. Milne, <i>Positively Pooh</i>
-                    .col-xs-12.col-sm-6.col-md-4
-                        img(src="images/pooh.jpg", alt="Winnie the pooh quote")
+        .animsition
+            .view.writer-view(id="writer")
+                .writer-content
+                    h1 About the Writer
+                    .row
+                        .col-xs-12.col-sm-6.col-md-4
+                            .crop
+                                img(src="images/linda_selfie.jpg", alt="Profile for Linda")
+                        .col-xs-12.col-sm-6.col-md-8
+                            p I live to eat, and I eat to live. LettuceSpoon is where I combine my interests in delicious foods and balanced nutrition. I am Linda Yung, a Registered Dietitian and masters of Food Policy and Applied Nutrition from Tufts Friedman. I am a die-hard New Yorker with lofty goals of changing the ways Americans perceive food. I can also be described as an aspiring jet-setter, amateur tai chi master, and novice stargazer. On the real, I enjoy meandering through foreign markets, I spend too much time reading science fiction, and I experiment a lot in the kitchen. I hope Lettuce Spoon will provide you with some insight on my gastronomic lifestyle and perhaps a pinch of inspiration as well.
+                            p Do you have any questions on the recipes? Don't know what you should be eating for breakfast? Need a recommendation for where to eat on a first date? Don't hesitate to contact me! 
+                            p To learn more about my hometown, visit my New York City cheat sheet,
+                            p And to see where I've been eating in New Orleans, check my visitor's guide.
+            .page-break
+                img(src="images/pagebreak.png", alt="Page break image")
+            .view.inspiration-view(id="inspiration")
+                .inspiration-content
+                    h1 The Inspiration
+                    .row
+                        .col-xs-12.col-sm-6.col-md-8
+                            blockquote "What do you like doing best in the world, Pooh?" asked Tigger. <br> "Well," said Pooh, "what I like best --" and then he had to stop to think. Because although eating honey was  a very good thing to do, there was a moment just before you began to eat it which was better than when you were, but he didn't know what it was called.
+                            hr
+                            blockquote "When you wake up in the morning, Pooh," said Piglet at last, "what's the first thing you say to yourself?" <br> "What's for breakfast?" said Pooh. "What do you say piglet?" <br> "I say, I wonder what's going to happen exciting today!"said Piglet. <br> Pooh nodded thoughtfully. <br> "It's the same thing," he said.
+                            hr
+                            p A.A. Milne, <i>Positively Pooh</i>
+                        .col-xs-12.col-sm-6.col-md-4
+                            img(src="images/pooh.jpg", alt="Winnie the pooh quote")
 
-        include includes/footer.jade
+        include _includes/footer.jade
         script(src='scripts/about-animation.js')

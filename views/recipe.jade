@@ -14,7 +14,7 @@ mixin recipe_template(dish)
 
 html(lang="en")
     head
-        include includes/header.jade
+        include _includes/header.jade
         link(href="stylesheets/recipe.css", rel="stylesheet", type="text/css")
         title LettuceSpoon Recipe
     body
@@ -52,5 +52,5 @@ html(lang="en")
         .animsition
             +recipe_template(data)
 
-        include includes/footer.jade
+        include _includes/footer.jade
         script(src='scripts/recipe-animation.js')

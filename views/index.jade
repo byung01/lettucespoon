@@ -25,7 +25,7 @@ mixin carousel(id, items)
 
 html(lang="en")
     head
-        include includes/header.jade
+        include _includes/header.jade
         link(href="stylesheets/index.css", rel="stylesheet", type="text/css")
         title LettuceSpoon
     body
@@ -73,5 +73,5 @@ html(lang="en")
             .page-break
                 img(src="images/pagebreak.png", alt="Page break image")
 
-        include includes/footer.jade
+        include _includes/footer.jade
         script(src='scripts/index-animation.js')

@@ -25,7 +25,7 @@ mixin recipe-box(dish, recipe)
 
 html(lang="en")
     head
-        include includes/header.jade
+        include _includes/header.jade
         link(href="stylesheets/recipes_list.css", rel="stylesheet", type="text/css")
         title LettuceSpoon Recipe List
     body.page-bg
@@ -64,5 +64,5 @@ html(lang="en")
             .view.recipe-list
                 +recipes-list-builder(data)
 
-        include includes/footer.jade
+        include _includes/footer.jade
         script(src='scripts/recipes-list-animation.js')
