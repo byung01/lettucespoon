@@ -26,5 +26,5 @@
 }
 
 .photos {
-    padding-top: 50px;
+    @include align_with_navbar();
 }

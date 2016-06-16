@@ -20,12 +20,12 @@
     margin: 0px -15px !important; } }
 .navbar-default .navbar-nav > .open > a {
   color: black !important;
-  background-color: #ddd !important;
-  border-color: #ddd !important; }
+  background-color: #9c9a9a !important;
+  border-color: #9c9a9a !important; }
 
 .dropdown-menu > li > a:hover {
   color: #32d25a !important;
-  background-color: #888 !important; }
+  background-color: #ddd !important; }
 
 /******************************************************************************/
 /*                    Styling to create sections on pages                     */
@@ -141,7 +141,7 @@
   background-attachment: fixed; }
 
 .recipe-list {
-  margin-top: 50px;
+  padding-top: 50px;
   padding-left: 2%;
   padding-right: 2%; }
 
@@ -155,7 +155,7 @@
   width: 100%;
   height: 70px;
   text-align: center;
-  font-family: 'Muli', sans-serif; }
+  font-family: "Muli", sans-serif; }
 
 .recipe-box-heading > h1 {
   display: block;
@@ -184,7 +184,10 @@
   padding-right: 3%;
   padding-left: 3%; }
 
+/******************************************************************************/
+/*                           Styling for recipe page                          */
+/******************************************************************************/
 .test > h1 {
-  padding-top: 55px; }
+  padding-top: 50px; }
 
 /*# sourceMappingURL=style.css.map */

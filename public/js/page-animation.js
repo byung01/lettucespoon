@@ -3,7 +3,7 @@ $(document).ready(function () {
         inClass: 'fade-in',
         outClass: 'fade-out',
         inDuration: 1500,
-        outDuration: 1500,
+        outDuration: 1000,
         linkElement: '.animsition-link',
         // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
         loading: true,
@@ -22,14 +22,8 @@ $(document).ready(function () {
         transition: function(url){ window.location.href = url; }
     });
 
-    // Animation for navbar dropdowns
-    // $('.nav').on('click', function (event) {
-    //     if ( $(event.target).is('a.anchor-scroll') ) {
-    //         $('.navbar-collapse').collapse('hide');
-    //     }
-    // });
-
-    $("li.dropdown").mouseover(function () {
+    /* Dropdowns will open when hovered in the navbar */
+    $(".navbar li.dropdown").mouseover(function () {
         $(this).addClass('open');
     }).mouseout(function () {
         $(this).removeClass('open');

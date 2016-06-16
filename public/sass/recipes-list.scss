@@ -14,7 +14,7 @@
 }
 
 .recipe-list {
-    margin-top: 50px;
+    @include align_with_navbar();
     padding-left: 2%;
     padding-right: 2%;
 }

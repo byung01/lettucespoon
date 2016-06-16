@@ -1,0 +1,33 @@
+//- Code for a collapsible navigation bar
+
+.navbar.navbar-default.navbar-fixed-top(role='navigation')
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand.animsition-link(href='/') LettuceSpoon
+        .navbar-collapse.collapse
+            ul.nav.navbar-nav
+                li.dropdown(id='about')
+                    a(href='/about') About <span class="caret"></span>
+                    ul.dropdown-menu
+                        li: a.animsition-link(href='/about#writer') The Writer
+                        li: a.animsition-link(href='/about#inspiration') The Inspiration
+            ul.nav.navbar-nav.navbar-right
+                li.dropdown(id='recipes')
+                    a(href='#') Recipes <span class="caret"></span>
+                    ul.dropdown-menu
+                        li: a.animsition-link(href='/recipes_list?meal_type=breakfast') Breakfast
+                        li: a.animsition-link(href='/recipes_list?meal_type=lunch/dinner') Lunch and Dinner
+                        li: a.animsition-link(href='/recipes_list?meal_type=starters/sides') Starters and Sides
+                        li: a.animsition-link(href='/recipes_list?meal_type=desserts') Desserts and Baked Goods
+                        li: a.animsition-link(href='/recipes_list?meal_type=all') All of the above
+                li.dropdown(id='posts')
+                    a(href='#') Posts <span class="caret"></span>
+                    ul.dropdown-menu
+                        li: a(href='#') Breakfast
+                        li: a(href='#') Restaurants
+                        li: a(href='#') Travel

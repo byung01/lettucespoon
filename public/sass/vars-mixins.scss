@@ -6,7 +6,7 @@
 $pink: #ff66ff !important;
 $green: #32d25a !important;
 $dark-gray: #ddd !important;
-$light-gray: #888 !important;
+$light-gray: #9c9a9a !important;
 
 /* Fonts */
 $Great-Vibes: 'Great Vibes', sans-serif;
@@ -31,4 +31,8 @@ $Muli: 'Muli', sans-serif;
     font-family: $Great-Vibes;
     font-size: 50px;
     text-align: center;
+}
+
+@mixin align_with_navbar() {
+    padding-top: 50px;
 }

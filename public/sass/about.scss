@@ -3,7 +3,7 @@
 /******************************************************************************/
 
 .writer-view {
-    padding-top: 50px;
+    @include align_with_navbar();
     background-color: white;
     width: 100%;
 }

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var recipe_types = $('ul.dropdown-menu.recipes').children();
+    var recipe_types = $('#recipes ul.dropdown-menu').children();
     var url = window.location.search;
     var meal_type = url.substring(url.indexOf('=') + 1);
 
@@ -21,6 +21,8 @@ $(document).ready(function () {
             index = 4;
     };
 
+    var link = $(recipe_types[index]).children()[0];
+    $(link).removeClass('animsition-link').attr('href','#');
     $(recipe_types[index]).addClass('active');
 
     /* FOR TESTING */
