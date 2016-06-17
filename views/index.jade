@@ -18,6 +18,7 @@ mixin carousel(id, items)
                 else
                     .item
                         img(src="#{item.image}", alt="Food image")
+            //- Adding arrows to navigate through photo carousel
             a.left.carousel-control(href='#carousel-photoroll', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left
             a.right.carousel-control(href='#carousel-photoroll', role='button', data-slide='next')
@@ -28,8 +29,10 @@ html(lang="en")
         include _includes/header.jade
         title LettuceSpoon
     body
+        //- Including Navbar template
         include _includes/navbar.jade
-        .animsition
+
+        main.animsition(role="main")
             .view.photos(id="home")
                 +carousel("photoroll",[
                     {image: "images/clementine.jpg"},

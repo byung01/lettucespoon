@@ -17,8 +17,10 @@ html(lang="en")
         include _includes/header.jade
         title LettuceSpoon Recipe
     body
+        //- Including Navbar template
         include _includes/navbar.jade
-        .animsition
+
+        main.animsition(role="main")
             .test
                 +recipe_template(data)
 

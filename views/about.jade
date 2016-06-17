@@ -5,8 +5,10 @@ html(lang="en")
         include _includes/header.jade
         title About the Website
     body
+        //- Including Navbar template
         include _includes/navbar.jade
-        .animsition
+
+        main.animsition(role="main")
             .view.writer-view(id="writer")
                 .writer-content
                     h1 About the Writer

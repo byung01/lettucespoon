@@ -28,8 +28,10 @@ html(lang="en")
         include _includes/header.jade
         title LettuceSpoon Recipe List
     body.page-bg
+        //- Including Navbar template
         include _includes/navbar.jade
-        .animsition
+
+        main.animsition(role="main")
             .view.recipe-list
                 +recipes-list-builder(data)
 
