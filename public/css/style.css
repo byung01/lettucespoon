@@ -23,7 +23,7 @@
   background-color: #9c9a9a !important;
   border-color: #9c9a9a !important; }
 
-.dropdown-menu > li > a:hover, a:focus {
+.dropdown-menu > li > a:hover, a:active {
   color: #32d25a !important;
   background-color: #ddd !important; }
 
