@@ -2,6 +2,9 @@
 /*                      Styling for the about section                         */
 /******************************************************************************/
 
+/*
+ *  Section on the writer
+ */
 .writer-view {
     @include align_with_navbar();
     background-color: white;
@@ -46,10 +49,9 @@
     font-family: $Noto-Sans;
 }
 
-/******************************************************************************/
-/*                   Styling for the inspiration section                      */
-/******************************************************************************/
-
+/*
+ *  Section on the inspiration
+ */
 .inspiration-view {
     background-color: white;
     width: 100%;
