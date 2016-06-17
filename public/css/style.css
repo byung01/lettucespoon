@@ -23,7 +23,7 @@
   background-color: #9c9a9a !important;
   border-color: #9c9a9a !important; }
 
-.dropdown-menu > li > a:hover {
+.dropdown-menu > li > a:hover, a:focus {
   color: #32d25a !important;
   background-color: #ddd !important; }
 
@@ -40,8 +40,11 @@
   margin: auto; }
 
 /******************************************************************************/
-/*                         Styling for image carousel                         */
+/*                        Styling for the home page                           */
 /******************************************************************************/
+/*
+ *  Image Carousel
+ */
 .carousel {
   margin-bottom: 5%; }
 
@@ -54,6 +57,9 @@
 /******************************************************************************/
 /*                      Styling for the about section                         */
 /******************************************************************************/
+/*
+ *  Section on the writer
+ */
 .writer-view {
   padding-top: 50px;
   background-color: white;
@@ -95,9 +101,9 @@
   font-size: 17px;
   font-family: "Noto Sans", sans-serif; }
 
-/******************************************************************************/
-/*                   Styling for the inspiration section                      */
-/******************************************************************************/
+/*
+ *  Section on the inspiration
+ */
 .inspiration-view {
   background-color: white;
   width: 100%; }

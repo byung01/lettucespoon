@@ -20,7 +20,7 @@
     border-color: $light-gray;
 }
 
-.dropdown-menu > li > a:hover {
+.dropdown-menu > li > a:hover, a:focus {
     color: $green;
     background-color: $dark-gray;
 }
