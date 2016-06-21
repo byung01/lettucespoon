@@ -1,16 +1,48 @@
 doctype html
 
-mixin recipe_template(dish)
-    if dish
-        each d in dish
-            h1 #{d.dish}
-            if d.description
-                each paragraph in d.description
-                    h1 #{paragraph}
-            else
-                h1 #{d.description_short}
+mixin add_recipe_description(dish, description, description_short)
+    h1.recipe-header #{dish}
+    .recipe-content
+        .recipe-photos
+            p Images will be placed here
+        p.recipe-sub-header: b Description:
+        if description
+            each paragraph in description
+                p #{paragraph}
+        else
+            p #{description_short}
+
+mixin add_recipe_ingredients(ingredients)
+    .col-xs-12.col-sm-6.col-md-4
+        p.recipe-sub-header: b Ingredients:
+        if ingredients
+            ul
+                each ingredient in ingredients
+                    li #{ingredient}
+        else
+            p No ingredients available
+
+mixin add_recipe_instructions(instructions)
+    .col-xs-12.col-sm-6.col-md-8
+        p.recipe-sub-header: b Instructions:
+        if instructions
+            ol
+                each instruction in instructions
+                    li #{instruction}
+        else
+            p No instructions available
+
+mixin recipe_template(data)
+    if data
+        each d in data
+            .view.recipe-description-layout
+                +add_recipe_description(d.dish, d.description, d.description_short)
+            .view.recipe-instructions-layout
+                +add_recipe_ingredients(d.recipe.ingredients)
+                +add_recipe_instructions(d.recipe.instructions)
     else
-        h1 No recipe to show
+        h1.recipe-header Recipe unavailable
+
 
 html(lang="en")
     head
@@ -21,8 +53,10 @@ html(lang="en")
         include _includes/navbar.jade
 
         main.animsition(role="main")
-            .test
+            if data
                 +recipe_template(data)
+            else
+                h1 No recipe to show
 
         include _includes/footer.jade
         script(src='js/recipe-animation.js')

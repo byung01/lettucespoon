@@ -2,6 +2,42 @@
 /*                           Styling for recipe page                          */
 /******************************************************************************/
 
-.test > h1 {
+.recipe-header {
     @include align_with_navbar();
+    @include page_header();
+}
+
+.recipe-sub-header {
+    display: inline-block;
+    font-size: 20px !important;
+    font-family: $Muli;
+}
+
+@media only screen and (max-width: 767px) {
+    .recipe-sub-header {
+        margin-top: 15px;
+    }
+}
+
+.recipe-content {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.recipe-photos {
+    float: left;
+    height: 300px;
+    width: 450px;
+    background-color: blue;
+    margin-right: 3%;
+    color: white;
+}
+
+.recipe-description-layout {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.recipe-instructions-layout {
+    padding: 1%;
 }

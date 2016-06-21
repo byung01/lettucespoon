@@ -17,15 +17,14 @@ $Muli: 'Muli', sans-serif;
 /*                                   Mixins                                   */
 /******************************************************************************/
 
-/* About page */
-@mixin content_layout() {
-    padding-top: 1%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 3%;
+/*
+ *  Reusable mixins for page styling
+ */
+@mixin align_with_navbar() {
+    padding-top: 50px;
 }
 
-@mixin content_header() {
+@mixin page_header() {
     color: $pink;
     padding-bottom: 2%;
     font-family: $Great-Vibes;
@@ -33,6 +32,11 @@ $Muli: 'Muli', sans-serif;
     text-align: center;
 }
 
-@mixin align_with_navbar() {
-    padding-top: 50px;
+/* 
+ *  About page 
+ */
+@mixin about_layout() {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 3%;
 }

@@ -12,11 +12,11 @@
 }
 
 .writer-content {
-    @include content_layout();
+    @include about_layout();
 }
 
 .writer-content > h1 {
-    @include content_header();
+    @include page_header();
 }
 
 .writer-content > .row > .col-xs-12.col-sm-6.col-md-4 > .crop > img {
@@ -58,11 +58,11 @@
 }
 
 .inspiration-content {
-    @include content_layout();
+    @include about_layout();
 }
 
 .inspiration-content > h1 {
-    @include content_header();
+    @include page_header();
 }
 
 .inspiration-content > .row > .col-xs-12.col-sm-6.col-md-8 > blockquote {

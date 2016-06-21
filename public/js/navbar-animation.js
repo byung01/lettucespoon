@@ -30,4 +30,11 @@ $(document).ready(function () {
     }).click(function () {
         $(this).removeClass('open');
     });
+
+    /* Navbar menu will close when any of the links are clicked on */
+    $('.nav').on('click', function (event) {
+        if ( $(event.target).is('a') ) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
 });

@@ -19,9 +19,9 @@ mixin carousel(id, items)
                     .item
                         img(src="#{item.image}", alt="Food image")
             //- Adding arrows to navigate through photo carousel
-            a.left.carousel-control(href='#carousel-photoroll', role='button', data-slide='prev')
+            a.left.carousel-control(href='#carousel-#{id}', role='button', data-slide='prev')
                 span.glyphicon.glyphicon-chevron-left
-            a.right.carousel-control(href='#carousel-photoroll', role='button', data-slide='next')
+            a.right.carousel-control(href='#carousel-#{id}', role='button', data-slide='next')
                 span.glyphicon.glyphicon-chevron-right
 
 html(lang="en")
@@ -34,7 +34,7 @@ html(lang="en")
 
         main.animsition(role="main")
             .view.photos(id="home")
-                +carousel("photoroll",[
+                +carousel("home-photoroll",[
                     {image: "images/clementine.jpg"},
                     {image: "images/fried-rice.jpg"},
                     {image: "images/granola.jpg"},
@@ -44,6 +44,8 @@ html(lang="en")
                 ])
             .page-break
                 img(src="images/pagebreak.png", alt="Page break image")
+
+            //- TODO: Need to add a welcome section to the page
 
         include _includes/footer.jade
         script(src='js/index-animation.js')
