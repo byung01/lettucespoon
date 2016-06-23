@@ -209,26 +209,49 @@
   font-size: 20px !important;
   font-family: "Muli", sans-serif; }
 
-@media only screen and (max-width: 767px) {
-  .recipe-sub-header {
-    margin-top: 15px; } }
 .recipe-content {
   text-align: justify;
   line-height: 1.8; }
 
 .recipe-photos {
   float: left;
-  height: 300px;
-  width: 450px;
-  background-color: blue;
-  margin-right: 3%;
+  margin-right: 4%;
   color: white; }
 
+.recipe-photos > img {
+  display: block;
+  height: 300px;
+  width: 450px; }
+
 .recipe-description-layout {
-  padding-left: 3%;
-  padding-right: 3%; }
+  padding-left: 4%;
+  padding-right: 4%; }
 
 .recipe-instructions-layout {
-  padding: 1%; }
+  padding: 2%; }
+
+/* Small styling tweaks for mobile devices */
+@media only screen and (max-width: 617px) {
+  .recipe-sub-header {
+    margin-top: 15px; }
+
+  .recipe-photos {
+    float: none; }
+
+  .recipe-photos > img {
+    width: 80%;
+    height: auto;
+    margin: auto; }
+
+  .recipe-description {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .recipe-description-layout {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .recipe-instructions-layout {
+    padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */

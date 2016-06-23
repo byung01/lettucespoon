@@ -4,13 +4,14 @@ mixin add_recipe_description(dish, description, description_short)
     h1.recipe-header #{dish}
     .recipe-content
         .recipe-photos
-            p Images will be placed here
+            img(src='images/fast-food.jpg', alt='testing image for recipe page')
         p.recipe-sub-header: b Description:
-        if description
-            each paragraph in description
-                p #{paragraph}
-        else
-            p #{description_short}
+        .recipe-description
+            if description
+                each paragraph in description
+                    p #{paragraph}
+            else
+                p #{description_short}
 
 mixin add_recipe_ingredients(ingredients)
     .col-xs-12.col-sm-6.col-md-4
