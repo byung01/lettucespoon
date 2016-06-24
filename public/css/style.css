@@ -196,6 +196,26 @@
 /******************************************************************************/
 /*                           Styling for recipe page                          */
 /******************************************************************************/
+.arrow-position {
+  font-size: 1.5rem;
+  padding-top: 7%;
+  padding-left: 3%; }
+
+.arrow-styling {
+  padding: 4px;
+  border-radius: 20px; }
+
+.arrow-prompt {
+  padding-left: 5%; }
+
+.glyphicon-arrow-left {
+  color: black;
+  border: 1px solid black; }
+
+.glyphicon-arrow-left:hover {
+  color: #32d25a !important;
+  border: 1px solid #32d25a !important; }
+
 .recipe-header {
   padding-top: 50px;
   color: #ff66ff !important;

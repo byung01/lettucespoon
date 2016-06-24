@@ -2,6 +2,31 @@
 /*                           Styling for recipe page                          */
 /******************************************************************************/
 
+.arrow-position {
+    font-size: 1.5rem;
+    padding-top: 7%;
+    padding-left: 3%;
+}
+
+.arrow-styling {
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.arrow-prompt {
+    padding-left: 5%;
+}
+
+.glyphicon-arrow-left {
+    color: black;
+    border: 1px solid black;
+}
+
+.glyphicon-arrow-left:hover {
+    color: $green;
+    border: 1px solid $green;
+}
+
 .recipe-header {
     @include align_with_navbar();
     @include page_header();

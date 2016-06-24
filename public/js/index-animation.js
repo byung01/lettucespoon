@@ -13,4 +13,10 @@ $(document).ready(function () {
         scrollSpeed: 800,
         offsetTop: 50
     });
+
+    $('.type-it').show().typeIt({
+        speed: 100,
+        lifeLike: true,
+        cursor: false
+    });
 });

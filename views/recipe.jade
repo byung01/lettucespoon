@@ -1,7 +1,12 @@
 doctype html
 
 mixin add_recipe_description(dish, description, description_short)
-    h1.recipe-header #{dish}
+    .row    
+        .col-md-2.arrow-position
+            a.arrow-link.animsition-link(href='#'): span.glyphicon.glyphicon-arrow-left.arrow-styling 
+            span.arrow-prompt Back to recipes
+        .col-md-8
+            h1.recipe-header #{dish}
     .recipe-content
         .recipe-photos
             img(src='images/fast-food.jpg', alt='testing image for recipe page')
