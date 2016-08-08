@@ -50,14 +50,20 @@
 /*
  *  Image Carousel
  */
-.carousel {
-  margin-bottom: 5%; }
-
 .carousel-control {
   width: 8% !important; }
 
-.photos {
-  padding-top: 50px; }
+.welcome-section {
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 3%; }
+
+.welcome-section > .welcome-header > .col-md-6 h1 {
+  color: #ff66ff !important;
+  padding-bottom: 2%;
+  font-family: "Great Vibes", sans-serif;
+  font-size: 50px;
+  text-align: center; }
 
 /******************************************************************************/
 /*                      Styling for the about section                         */
@@ -96,10 +102,7 @@
     width: 200px;
     height: 150px;
     margin: auto;
-    overflow: hidden; }
-
-  h1 {
-    text-align: center; } }
+    overflow: hidden; } }
 .writer-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
   color: black !important;
   font-size: 17px;

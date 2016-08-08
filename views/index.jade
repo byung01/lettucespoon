@@ -33,21 +33,27 @@ html(lang="en")
         include _includes/navbar.jade
 
         main.animsition(role="main")
-            .view.photos(id="home")
-                +carousel("home-photoroll",[
-                    {image: "images/clementine.jpg"},
-                    {image: "images/fried-rice.jpg"},
-                    {image: "images/granola.jpg"},
-                    {image: "images/home-cooking.jpg"},
-                    {image: "images/ramen.jpg"},
-                    {image: "images/sandwich.jpg"}
-                ])
-            .page-break
+            .view
+                //- TODO: Need to add a welcome section to the page
+                .welcome-section
+                    .row.welcome-header
+                        .col-md-3
+                        .col-md-6
+                            h1 Welcome to LettuceSpoon!
+                        .col-md-3
+                    .row.welcome-content
+                        p Testing testing testing testing testing testing testing
+                .main-photo-carousel
+                    +carousel("home-photoroll",[
+                        {image: "images/clementine.jpg"},
+                        {image: "images/fried-rice.jpg"},
+                        {image: "images/granola.jpg"},
+                        {image: "images/home-cooking.jpg"},
+                        {image: "images/ramen.jpg"},
+                        {image: "images/sandwich.jpg"}
+                    ])
+            //- .page-break
                 img(src="images/pagebreak.png", alt="Page break image")
-
-            //- TODO: Need to add a welcome section to the page
-            .view.welcome-section
-                span.type-it <h1>Welcome to LettuceSpoon!</h1>
 
         include _includes/footer.jade
         script(src='js/index-animation.js')
