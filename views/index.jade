@@ -34,21 +34,18 @@ html(lang="en")
 
         main.animsition(role="main")
             .view
-                //- TODO: Need to add a welcome section to the page
                 .welcome-section
-                    .col-xs-3.col-md-3
-                        .welcome-section-image-crop
-                            img(src="images/lettuce.jpg", alt="Lettuce")
-                    .col-xs-6.col-md-6
+                    .welcome-section-image-left
+                        img(src="images/lettuce.jpg", alt="Lettuce")
+                    .welcome-text-container
                         .welcome-header
                             h1 Welcome to LettuceSpoon!
                         .welcome-content
-                            p Food food food food food food food food food food
-                            p Food food food food food food food food food food
-                            p Food food food food food food food food food food
-                    .col-xs-3.col-md-3
-                        .welcome-section-image-crop
-                            img(src="images/wooden-spoon.jpg", alt="Wooden Spoon")
+                            p OF THE FOOD
+                            p FOR THE FOOD
+                            p BY THE FOOD
+                    .welcome-section-image-right
+                        img(src="images/wooden-spoon.jpg", alt="Wooden Spoon")
                 .main-photo-carousel
                     +carousel("home-photoroll",[
                         {image: "images/clementine.jpg"},

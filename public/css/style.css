@@ -9,6 +9,9 @@
 /*
  *  Reusable mixins for page styling
  */
+/*
+ *  Welcome section on home page
+ */
 /* 
  *  About page 
  */
@@ -55,26 +58,36 @@
 
 .welcome-section {
   padding-top: 50px;
-  text-align: center;
   margin-bottom: 3%; }
 
-.welcome-section > .col-md-6 > .welcome-header > h1 {
+.welcome-text-container {
+  width: 50%;
+  margin: auto; }
+
+.welcome-text-container > .welcome-header > h1 {
   color: #ff66ff !important;
   padding-bottom: 2%;
   font-family: "Great Vibes", sans-serif;
   font-size: 50px;
   text-align: center; }
 
-.welcome-section > .col-md-6 > .welcome-content > p {
+.welcome-text-container > .welcome-content > p {
+  text-align: center;
   margin-bottom: 2%; }
 
-.welcome-section-image-crop {
-  width: 100px;
-  height: 100px; }
+.welcome-section-image-left > img {
+  position: absolute;
+  top: 70px;
+  overflow: hidden;
+  z-index: -1;
+  left: 0; }
 
-.welcome-section-image-crop > img {
-  vertical-align: middle;
-  margin: auto; }
+.welcome-section-image-right > img {
+  position: absolute;
+  top: 70px;
+  overflow: hidden;
+  z-index: -1;
+  right: 0; }
 
 /******************************************************************************/
 /*                      Styling for the about section                         */

@@ -27,24 +27,30 @@
 
 .welcome-section {
     @include align_with_navbar();
-    text-align: center;
+    // text-align: center;
     margin-bottom: 3%;
 }
 
-.welcome-section > .col-md-6 > .welcome-header > h1 {
+.welcome-text-container {
+    width: 50%;
+    margin: auto;
+}
+
+.welcome-text-container > .welcome-header > h1 {
     @include page_header();
 }
 
-.welcome-section > .col-md-6 > .welcome-content > p {
+.welcome-text-container > .welcome-content > p {
+    text-align: center;
     margin-bottom: 2%;
 }
 
-.welcome-section-image-crop {
-    width: 100px;
-    height: 100px;
+.welcome-section-image-left > img {
+    @include welcome_section_image();
+    left: 0;
 }
 
-.welcome-section-image-crop > img {
-    vertical-align: middle;
-    margin: auto;
+.welcome-section-image-right > img {
+    @include welcome_section_image();
+    right: 0;
 }

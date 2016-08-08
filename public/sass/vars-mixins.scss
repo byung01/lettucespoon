@@ -32,6 +32,17 @@ $Muli: 'Muli', sans-serif;
     text-align: center;
 }
 
+/*
+ *  Welcome section on home page
+ */
+@mixin welcome_section_image() {
+    position: absolute;
+    top: 70px;
+    // height: 150px;
+    overflow: hidden;
+    z-index: -1;
+}
+
 /* 
  *  About page 
  */
