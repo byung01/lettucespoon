@@ -23,18 +23,40 @@ $(document).ready(function () {
     });
 
     /* Dropdowns will open when hovered in the navbar */
-    $(".navbar li.dropdown").mouseover(function () {
-        $(this).addClass('open');
-    }).mouseout(function () {
-        $(this).removeClass('open');
-    }).click(function () {
-        $(this).removeClass('open');
-    });
+    var browser_width = $(window).width();
+    if (browser_width > 767) {
+        $(".navbar li.dropdown").mouseover(function () {
+            $(this).addClass('open');
+        }).mouseout(function () {
+            $(this).removeClass('open');
+        }).click(function () {
+            $(this).removeClass('open');
+        });
 
-    /* Navbar menu will close when any of the links are clicked on */
-    $('.nav').on('click', function (event) {
-        if ( $(event.target).is('a') ) {
-            $('.navbar-collapse').collapse('hide');
+        /* Navbar menu will close when any of the links are clicked on */
+        $('.nav').on('click', function (event) {
+            if ( $(event.target).is('a') ) {
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
+    }
+    /* On a mobile device, hovering will be disabled */
+    else {
+        /* Deleting all the links on the navbar */
+        var navbar_links = $('li.dropdown').children('a');
+        var num_of_links = $('li.dropdown').children('a').length;
+        for (var i = 0; i < num_of_links; i++) {
+            navbar_links[i].href = '#';
         }
-    });
+
+        /* Adding a click toggle for the dropdowns in the navbar */
+        $('li.dropdown').on('click', function () {
+            if ( $(this).hasClass('open') ) {
+                $(this).removeClass('open');
+            }
+            else {
+                $(this).addClass('open');
+            }
+        });
+    }
 });
