@@ -36,13 +36,19 @@ html(lang="en")
             .view
                 //- TODO: Need to add a welcome section to the page
                 .welcome-section
-                    .row.welcome-header
-                        .col-md-3
-                        .col-md-6
+                    .col-xs-3.col-md-3
+                        .welcome-section-image-crop
+                            img(src="images/lettuce.jpg", alt="Lettuce")
+                    .col-xs-6.col-md-6
+                        .welcome-header
                             h1 Welcome to LettuceSpoon!
-                        .col-md-3
-                    .row.welcome-content
-                        p Testing testing testing testing testing testing testing
+                        .welcome-content
+                            p Testing testing testing testing testing testing testing
+                            p Testing testing testing testing testing testing testing
+                            p Testing testing testing testing testing testing testing
+                    .col-xs-3.col-md-3
+                        .welcome-section-image-crop
+                            img(src="images/wooden-spoon.jpg", alt="Wooden Spoon")
                 .main-photo-carousel
                     +carousel("home-photoroll",[
                         {image: "images/clementine.jpg"},
@@ -52,8 +58,6 @@ html(lang="en")
                         {image: "images/ramen.jpg"},
                         {image: "images/sandwich.jpg"}
                     ])
-            //- .page-break
-                img(src="images/pagebreak.png", alt="Page break image")
 
         include _includes/footer.jade
         script(src='js/index-animation.js')

@@ -31,6 +31,20 @@
     margin-bottom: 3%;
 }
 
-.welcome-section > .welcome-header > .col-md-6 h1 {
+.welcome-section > .col-md-6 > .welcome-header > h1 {
     @include page_header();
+}
+
+.welcome-section > .col-md-6 > .welcome-content > p {
+    margin-bottom: 2%;
+}
+
+.welcome-section-image-crop {
+    width: 100px;
+    height: 100px;
+}
+
+.welcome-section-image-crop > img {
+    vertical-align: middle;
+    margin: auto;
 }
