@@ -58,7 +58,7 @@
 
 .welcome-section {
   padding-top: 50px;
-  margin-bottom: 3%; }
+  margin-bottom: 2%; }
 
 .welcome-text-container {
   width: 50%;
@@ -72,8 +72,7 @@
   text-align: center; }
 
 .welcome-text-container > .welcome-content > p {
-  text-align: center;
-  margin-bottom: 2%; }
+  text-align: center; }
 
 .welcome-section-image-left > img {
   position: absolute;
