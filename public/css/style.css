@@ -10,6 +10,9 @@
  *  Reusable mixins for page styling
  */
 /*
+ *  Styling for the footer of a page
+ */
+/*
  *  Welcome section on home page
  */
 /* 
@@ -335,7 +338,7 @@
 
 .footer-text-container {
   padding: 2%;
-  background-color: #ddd !important;
+  background-color: #9c9a9a !important;
   opacity: 0.8; }
 
 .footer-text-container h1 {
@@ -343,25 +346,22 @@
   font-family: "Great Vibes", sans-serif;
   border-bottom: 1px solid white; }
 
-.footer-text-container hr {
-  width: 90%;
-  border-color: purple; }
-
-.footer-text-container p {
+.footer-section p {
   margin: 0; }
 
-.footer-text-container > .col-xs-12.col-sm-6.col-md-6 {
+.footer-text-container > .row > .col-xs-12.col-sm-6.col-md-6 {
   margin-bottom: 2%; }
 
-.footer-text-container > .col-xs-12.col-sm-6.col-md-6 a {
+.footer-text-container > .row > .col-xs-12.col-sm-6.col-md-6 a {
   color: white; }
 
-.footer-text-container > .col-xs-12.col-sm-6.col-md-6 a:hover {
+.footer-text-container > .row > .col-xs-12.col-sm-6.col-md-6 a:hover {
   text-decoration: none; }
 
 .footer-copyright {
   width: 100%;
+  padding: 0 2% 1% 2%;
   background-color: #9c9a9a !important;
-  opacity: none; }
+  opacity: 0.8; }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,8 +12,7 @@
 
 .footer-text-container {
     padding: 2%;
-    background-color: $light-gray;
-    opacity: 0.8;
+    @include footer_bg();
 }
 
 .footer-text-container h1 {
@@ -22,28 +21,23 @@
     border-bottom: 1px solid white;
 }
 
-.footer-text-container hr {
-    width: 90%;
-    border-color: purple;
-}
-
-.footer-text-container p {
+.footer-section p {
     margin: 0;
 }
 
-.footer-text-container > .col-xs-12.col-sm-6.col-md-6 {
+.footer-text-container > .row > .col-xs-12.col-sm-6.col-md-6 {
     margin-bottom: 2%;
 }
 
-.footer-text-container > .col-xs-12.col-sm-6.col-md-6 a {
+.footer-text-container > .row > .col-xs-12.col-sm-6.col-md-6 a {
     color: white;
 }
-.footer-text-container > .col-xs-12.col-sm-6.col-md-6 a:hover {
+.footer-text-container > .row > .col-xs-12.col-sm-6.col-md-6 a:hover {
     text-decoration: none;
 }
 
 .footer-copyright {
     width: 100%;
-    background-color: $dark-gray;
-    opacity: none;
+    padding: 0 2% 1% 2%;
+    @include footer_bg();
 }

@@ -33,6 +33,14 @@ $Muli: 'Muli', sans-serif;
 }
 
 /*
+ *  Styling for the footer of a page
+ */
+@mixin footer_bg() {
+    background-color: $dark-gray;
+    opacity: 0.8;
+}
+
+/*
  *  Welcome section on home page
  */
 @mixin welcome_section_image() {
