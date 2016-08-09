@@ -38,9 +38,13 @@ $Muli: 'Muli', sans-serif;
 @mixin welcome_section_image() {
     position: absolute;
     top: 70px;
-    // height: 150px;
     overflow: hidden;
     z-index: -1;
+}
+
+@mixin welcome_section_image_mobile() {
+    @include welcome_section_image();
+    width: 150px;
 }
 
 /* 

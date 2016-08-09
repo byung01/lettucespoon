@@ -27,7 +27,6 @@
 
 .welcome-section {
     @include align_with_navbar();
-    // text-align: center;
     margin-bottom: 2%;
 }
 
@@ -42,7 +41,6 @@
 
 .welcome-text-container > .welcome-content > p {
     text-align: center;
-    // margin-bottom: 2%;
 }
 
 .welcome-section-image-left > img {
@@ -53,4 +51,21 @@
 .welcome-section-image-right > img {
     @include welcome_section_image();
     right: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .welcome-text-container > .welcome-header > h1 {
+        @include page_header();
+        font-size: 30px;
+    }
+
+    .welcome-section-image-left > img {
+        @include welcome_section_image_mobile();
+        left: 0;
+    }
+
+    .welcome-section-image-right > img {
+        @include welcome_section_image_mobile();
+        right: 0;
+    }
 }

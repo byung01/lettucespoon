@@ -88,6 +88,30 @@
   z-index: -1;
   right: 0; }
 
+@media only screen and (max-width: 767px) {
+  .welcome-text-container > .welcome-header > h1 {
+    color: #ff66ff !important;
+    padding-bottom: 2%;
+    font-family: "Great Vibes", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-size: 30px; }
+
+  .welcome-section-image-left > img {
+    position: absolute;
+    top: 70px;
+    overflow: hidden;
+    z-index: -1;
+    width: 150px;
+    left: 0; }
+
+  .welcome-section-image-right > img {
+    position: absolute;
+    top: 70px;
+    overflow: hidden;
+    z-index: -1;
+    width: 150px;
+    right: 0; } }
 /******************************************************************************/
 /*                      Styling for the about section                         */
 /******************************************************************************/
