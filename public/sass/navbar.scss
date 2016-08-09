@@ -16,11 +16,11 @@
 
 .navbar-default .navbar-nav > .open > a {
     color: black !important;
-    background-color: $light-gray;
-    border-color: $light-gray;
+    background-color: $dark-gray;
+    border-color: $dark-gray;
 }
 
 .dropdown-menu > li > a:hover {
     color: $green;
-    background-color: $dark-gray;
+    background-color: $light-gray;
 }
