@@ -15,6 +15,20 @@ $(document).ready(function () {
         };
     }
 
+    /* Updating links on footer for the About Page */
+    var footer_about = $('#footer_about a');
+    for (var i = 0; i < footer_about.length; i++) {
+        $(footer_about[i]).removeClass('animsition-link').addClass('anchor-scroll');
+        switch(i) {
+            case 0:
+                $(footer_about[i]).attr('href','#writer');
+                break;
+            case 1:
+                $(footer_about[i]).attr('href','#inspiration');
+                break;
+        }
+    }
+
     /* Adding anchor scroll animation */
     $('.anchor-scroll').anchorScroll({
         scrollSpeed: 800,
