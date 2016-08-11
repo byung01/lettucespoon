@@ -75,7 +75,9 @@
   text-align: center; }
 
 .welcome-text-container > .welcome-content > p {
-  text-align: center; }
+  text-align: center;
+  font-family: "Arimo", sans-serif;
+  font-weight: bold; }
 
 .welcome-section-image-left > img {
   position: absolute;
@@ -156,7 +158,7 @@
 .writer-content > .row > .col-xs-12.col-sm-6.col-md-8 > p {
   color: black !important;
   font-size: 17px;
-  font-family: "Noto Sans", sans-serif; }
+  font-family: "Cabin", sans-serif; }
 
 /*
  *  Section on the inspiration
